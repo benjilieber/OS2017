@@ -104,7 +104,7 @@ timeMeasurmentStructure measureTimes (unsigned int operation_iterations,
     timeMeasurmentStructure* times = new timeMeasurmentStructure();
     size_t* length;
     
-    gethostname(times.machineName, length);
+	gethostname(times.machineName, length);
 	times.instructionTimeNanoSecond = osm_operation_time(operation_iterations);
 	times.functionTimeNanoSecond = osm_function_time(function_iterations);
 	times.trapTimeNanoSecond = osm_syscall_time(syscall_iterations);
